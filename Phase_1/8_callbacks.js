@@ -9,11 +9,11 @@
 // console.log('3. The rest of the program below (immediate tasks) will keep running immediately');
 
 const printHello = () => {
-  console.log('HELLO');
-}
+  console.log("HELLO");
+};
 
 const executeAfterDelay = (delay, delayedFunction) => {
   setTimeout(delayedFunction, delay * 1000);
-}
+};
 
 executeAfterDelay(5, printHello);

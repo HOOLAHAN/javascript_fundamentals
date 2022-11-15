@@ -24,28 +24,30 @@
 // console.log(bankAccount.accountNumber);
 
 const person = {
-  name: 'Maxine',
+  name: "Maxine",
   age: 32,
   address: {
-    city: 'London',
-    postcode: 'E1 123'
+    city: "London",
+    postcode: "E1 123",
   },
-  hobbies: ['writing', 'tennis', 'cooking']
+  hobbies: ["writing", "tennis", "cooking"],
 };
 
-console.log(person.address['city']);
+console.log(person.address["city"]);
 console.log(person.address.city);
 
 console.log(person.hobbies[1]);
 
 const cohort = {
-  name: 'Oct2022',
+  name: "Oct2022",
   id: 1337,
-  students: ['Adon', 'Tom', 'Joe', 'Iain']
-}
+  students: ["Adon", "Tom", "Joe", "Iain"],
+};
 
 const printing = (cohort) => {
-  console.log(`${cohort.id} - ${cohort.name} - ${cohort.students.length} students in this cohort.`)
-}
+  console.log(
+    `${cohort.id} - ${cohort.name} - ${cohort.students.length} students in this cohort.`
+  );
+};
 
 printing(cohort);

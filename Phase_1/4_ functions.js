@@ -10,7 +10,6 @@
 
 // console.log(transform("hello", uppercaseMessage));
 
-
 // const lowercaseMessage = (message) => {
 //   return message.toLowerCase();
 // }

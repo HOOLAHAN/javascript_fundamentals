@@ -17,4 +17,3 @@ const fizzBuzz = (a) => {
 };
 
 fizzbuzzUntil(100);
-
