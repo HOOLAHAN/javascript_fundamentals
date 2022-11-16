@@ -1,6 +1,5 @@
 // file: fizzBuzz.test.js
 
-// const { describe } = require("node:test");
 const fizzBuzz = require("./fizzbuzz");
 
 describe ('fizzbuzz', () => {
