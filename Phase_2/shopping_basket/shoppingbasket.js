@@ -4,24 +4,41 @@ class ShoppingBasket {
 
   constructor(){
     this.basket_array = [];
+    this.discount = 0;
   }
 
   addItem = (candy) => {
     this.basket_array.push(candy)
   }
 
-  getTotalPrice = () => {
-    const temp_array =
-    this.basket_array.map((candy) => {
-      return candy.getPrice();
-    })
-  return temp_array.reduce((a, b) => {return a + b}, 0)
+  applyDiscount(discount) {
+    this.discount = discount;
   }
+
+  getTotalPrice() {
+    let totalPrice = 0;
+    this.basket_array.forEach((candy) => {
+      totalPrice += candy.getPrice();
+    });
+
+    return totalPrice - this.discount;
+  }
+  
 }
 
 module.exports = ShoppingBasket;
 
+
+// getTotalPrice = () => {
+//   const temp_array =
+//   this.basket_array.map((candy) => {
+//     return candy.getPrice();
+//   })
+// return temp_array.reduce((a, b) => {return a + b}, 0)
+// }
+
 // ====================================================
+
 // node
 // const Candy = require('./candy');
 // const ShoppingBasket = require('./shoppingBasket');

@@ -25,4 +25,14 @@ describe('ShoppingBasket', () => {
     basket.addItem(candyDouble3);
     expect(basket.getTotalPrice()).toEqual(12.99)
   })
+
+  it('applies a discount to the basket and returns the total value', () => {
+    let basket = new ShoppingBasket();
+    let candyDouble1 = { getName: () => 'Mars', getPrice: () => 4.99 };
+    let candyDouble2 = { getName: () => 'Snickers', getPrice: () => 4.01 };
+    basket.addItem(candyDouble1);
+    basket.addItem(candyDouble2);
+    basket.applyDiscount(2.50);
+    expect(basket.getTotalPrice()).toEqual(6.50)
+  })
 });
