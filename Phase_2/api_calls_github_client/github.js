@@ -5,7 +5,7 @@ const GithubClient = require("./githubClient");
 class Github {
 
   constructor(client) {
-    this.client = client
+    this.client = client;
     this.result;
   }
 
